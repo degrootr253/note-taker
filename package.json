@@ -1,0 +1,24 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "Will keep track of any notes for you.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/degrootr253/note-taker.git"
+  },
+  "author": "Ryan DeGroot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/degrootr253/note-taker/issues"
+  },
+  "homepage": "https://github.com/degrootr253/note-taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security"
+  }
+}
