@@ -5,7 +5,7 @@ const path = require('path');
 const db = require('./db/db.json');
 const uuid = require('./helpers/uuid');
 
-
+const randomId = uuid();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -28,6 +28,9 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
+
+
+    randomId(newNote);
 
     db.push(newNote);
 
