@@ -1,11 +1,12 @@
-const { notStrictEqual } = require('assert');
+
+const { urlencoded } = require('express');
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const db = require('./db/db.json');
 const uuid = require('./helpers/uuid');
 
-const randomId = uuid();
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -27,21 +28,26 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.post('/api/notes', (req, res) => {
-    const newNote = req.body;
 
+    const { id, title, text } = req.body;
 
-    randomId(newNote);
+    const newNote = {
+        id: uuid(),
+        title,
+        text
+    };
 
     db.push(newNote);
 
-    fs.writeFile(__dirname, './db/db.jon', JSON.stringify(db), function (err) {
+
+    fs.writeFile('./db/db.json', JSON.stringify(db), function (err) {
         if (err) {
             return console.log(err);
         } else {
             console.log('Note Saved!')
         }
     });
-    return res.json(newNote);
+    return res.json(db);
 });
 
 
