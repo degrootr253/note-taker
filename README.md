@@ -12,7 +12,7 @@ This application will allow you to
 JavaScript, Node.js, npm packages, Express
 
 ## Video
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://watch.screencastify.com/v/rjsaKThRquBh29p7OF2c)
+[![Watch the video](https://watch.screencastify.com/v/rjsaKThRquBh29p7OF2c)]
 
 ## License
 © Ryan DeGroot, UW Coding Bootcamp
