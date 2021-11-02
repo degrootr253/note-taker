@@ -1,6 +1,6 @@
 # note-taker
 
-[![Heroku CI Status](https://the-note-taker123.herokuapp.com/)]
+[![Heroku CI Status](https://the-note-taker123.herokuapp.com/)
 
 ## Version
 1.0.0
